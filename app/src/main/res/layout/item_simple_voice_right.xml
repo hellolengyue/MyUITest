@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <!--卧槽，这里的RelativeLayout的宽不能设为wrap_content，否则等价于match_parent-->
+    <RelativeLayout
+        android:id="@+id/rl_voice_content"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/holo_orange_light"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="5''"
+            android:textColor="#f00"
+            android:textSize="11sp"/>
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/tv_duration"
+            android:scaleType="centerCrop"
+            android:src="@drawable/icon"/>
+    </RelativeLayout>
+</RelativeLayout>
