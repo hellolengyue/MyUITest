@@ -9,6 +9,7 @@ import android.widget.ListView;
 
 import com.example.myuitest.chat.ChatActivity;
 import com.example.myuitest.normal.NormalActivity;
+import com.example.myuitest.titlelist.TitleListActivity;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,7 +22,8 @@ public class MainActivity extends ListActivity {
         String[] array = {
                 "NormalActivity",
                 "ChatActivity",
-                "ConcurrentLinkedQueue使用"};
+                "ConcurrentLinkedQueue使用",
+                "titleList"};
         setListAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, new ArrayList<>(Arrays.asList(array))));
     }
 
@@ -36,6 +38,9 @@ public class MainActivity extends ListActivity {
                 break;
             case 2:
                 startActivity(new Intent(this, QueueActivity.class));
+                break;
+            case 3:
+                startActivity(new Intent(this, TitleListActivity.class));
                 break;
         }
     }
